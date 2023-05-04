@@ -1,0 +1,40 @@
+.nav-container {
+  background-color: #030303da;
+  color: #fff;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.categories{
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categories button {
+  width: 130px;
+  height: 70px;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: black solid 1px;;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;  
+  border-radius: 0px;
+}
+.categories button:hover {
+  background-color: #131212;
+  color: #fff;
+  border: black solid 1px;
+}
+.categories button:active {
+  background-color: #131212;
+  color: #fff;
+  border: black solid 1px;
+}

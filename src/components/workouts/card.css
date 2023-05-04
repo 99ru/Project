@@ -1,0 +1,48 @@
+.single-card-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.single-card-container {
+  width: 350px;
+  padding-top: 1rem;
+  margin: 1rem;
+  background: #3e3e3e0f;
+
+}
+
+.card-content {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border: #e6e0e0 solid 1px;
+  box-shadow: #00000029 0px 0px 10px;
+  height: 120px;
+  text-align: center;
+}
+
+.card-button {
+  background: #000000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 6px;
+  padding: 8px 12px 8px 12px;
+}
+
+.card-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.workout-image {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+
+
+

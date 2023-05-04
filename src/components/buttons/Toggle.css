@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-container button {
+  width: 165px;
+  height: 60px;
+  background: transparent;
+  color: white;
+  border: solid 1px white;
+  border-radius: 0px;
+}
+.toggle-container button:hover {
+  cursor: pointer;
+}
+.toggle-container button.selected {
+  background-color: #ffffff;
+  color: #000;
+}
+
