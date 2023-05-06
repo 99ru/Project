@@ -1,6 +1,6 @@
 import "./card.css";
 
-const SingleCard = ({ name, image, gif, showWorkout, id,}) => {
+const SingleCard = ({ name, image, showWorkout, id,}) => {
   return (
     <div className="single-card-container">
      <img src={image} alt={name} className="workout-image" />

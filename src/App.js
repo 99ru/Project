@@ -13,13 +13,11 @@ const ITEMS_PER_PAGE = 12;
 function App() {
   const [workouts, setWorkouts] = useState([]);
   const [filter, setFilter] = useState("");
-  const [genderToggle, setGenderToggle] = useState("mens");
   const [modal, setModal] = useState(false);
   const [selectedWorkout, setSelectedWorkout] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const selectFilter = (e) => setFilter(e.target.id);
-  const selectGender = (e) => setGenderToggle(e.target.id);
   const toggleModal = () => setModal(!modal);
   const showWorkout = (id) => {
     setSelectedWorkout(id);
@@ -55,17 +53,21 @@ function App() {
       <Header />
       {/* <VideoLoop /> */}
       <Nav
-        genderToggle={genderToggle}
-        selectGender={selectGender}
         selectFilter={selectFilter}
       />
       <div className="main-content">
         <Cards
           workouts={currentWorkouts}
           showWorkout={showWorkout}
-          genderToggle={genderToggle}
+  
         />
       </div>
+      <ModalData
+        workouts={workouts}
+        modal={modal}
+        toggleModal={toggleModal}
+        selectedWorkout={selectedWorkout}
+      />
       <Pagination
         count={Math.ceil(filteredWorkouts.length / ITEMS_PER_PAGE)}
         onChange={handlePageChange}
@@ -73,15 +75,6 @@ function App() {
         color="primary"
         className="pagination"
       />
-      <ModalData
-        workouts={workouts}
-        modal={modal}
-        toggleModal={toggleModal}
-        genderToggle={genderToggle}
-        selectedWorkout={selectedWorkout}
-      />
-
-      {/* <Footer /> */}
     </div>
   );
 }
