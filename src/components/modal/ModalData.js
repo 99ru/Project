@@ -2,7 +2,7 @@ import CardModal from "./CardModal";
 
 const ModalData = ({
   workouts,
-  genderToggle,
+ /*  genderToggle, */
   selectedWorkout,
   modal,
   toggleModal,
@@ -17,7 +17,7 @@ return (
             workout={filteredWorkout}
             modal={modal}
             toggleModal={toggleModal}
-            genderToggle={genderToggle}
+            /* genderToggle={genderToggle} */
           />
         ))}
   </>

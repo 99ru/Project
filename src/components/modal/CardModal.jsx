@@ -12,8 +12,10 @@ const CardModal = ({ modal, toggleModal, workout, genderToggle }) => {
           <img src={workout.gif} alt={workout.name} />
           <div className="info-box">
           <h1>{workout.name}</h1>
+          <p><strong>Area:</strong> {workout.bodyParts}</p>
             <p><strong>Primary muscle:</strong> {workout.primaryMuscle}</p>
             <p><strong>Equipment used:</strong> <span>{workout.equipment}</span></p>
+            <p>Donec fermentum augue quam, in euismod massa ultricies in. Vestibulum lacinia erat ligula, at bibendum leo finibus ultrices. Nullam etlacus</p>
           </div>
         </div>
       </main>

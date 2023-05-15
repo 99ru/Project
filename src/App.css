@@ -7,18 +7,14 @@
 
 .App {
   text-align: center;
-  
 }
 
 .main-content {
-  background-color: whitesmoke;
+ /*  background-color: whitesmoke; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: center;
   justify-content: center;
-  margin-top: 50px; /* Adjust this value based on your header height */
-/*   align-items: center;
-  margin-top: 30rem; */
 }
 
 .pagination {

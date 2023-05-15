@@ -2,7 +2,8 @@
   background-color: #030303da;
   color: #fff;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  padding: 8rem;
+  /* padding: 8rem; */
+  padding: 8rem 12rem 2rem 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,18 +16,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 8px;
 }
 .categories button {
-  width: 130px;
-  height: 70px;
-  font-size: 20px;
+  width: 120px;
+  height: 90px;
+  font-size: 16px;
   background-color: #ffffff;
   border: black solid 1px;;
   color: rgb(0, 0, 0);
-  padding: 1rem;
+  /* padding: 1rem; */
   cursor: pointer;
   transition: all 0.3s ease-in-out;  
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .categories button:hover {
   background-color: #131212;
