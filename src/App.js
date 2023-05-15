@@ -25,9 +25,10 @@ function App() {
   };
 
   const filteredWorkouts = workouts.filter((workout) => {
-    return workout.bodyParts.includes(filter);
+    return workout.bodyParts.includes(filter) || workout.equipment.includes(filter);
   });
   console.log(filteredWorkouts);
+  
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -49,7 +50,7 @@ function App() {
     fetchURL();
   }, []);
 
-  console.log(workouts)
+
 
   return (
     <div>
