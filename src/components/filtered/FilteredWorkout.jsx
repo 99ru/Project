@@ -5,7 +5,7 @@ const FilteredWorkout = ({ selectFilter }) => {
   return (
     <>
       <div className="bodypart-buttons">
-        <p>BY BODY PART</p>
+        <p>by Bodypart</p>
         <button id="" onClick={selectFilter}>All</button>
         <button id="shoulders" onClick={selectFilter}>Shoulders</button>
         <button id="chest" onClick={selectFilter}>Chest</button>
@@ -17,9 +17,9 @@ const FilteredWorkout = ({ selectFilter }) => {
       </div>
 
       <div className="bodypart-buttons">
-        <p>BY Equipment</p>
+        <p>By Equipment</p>
         <button id="body weight" onClick={selectFilter}>body weight</button>
-        <button id="dumbell" onClick={selectFilter}>dumbell</button>
+        <button id="dumbbell" onClick={selectFilter}>dumbbell</button>
         <button id="barbell" onClick={selectFilter}>barbell</button>
         <button id="resistance band" onClick={selectFilter}>resistance</button>
         <button id="machine" onClick={selectFilter}>machine</button>
