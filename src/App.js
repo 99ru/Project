@@ -7,7 +7,7 @@ import ModalData from "./components/modal/ModalData";
 import Footer from "./components/footer/Footer";
 import Pagination from "@mui/material/Pagination";
 
-const URL = "https://run.mocky.io/v3/32b5991f-05ce-414d-90f7-3fe85416abf2";
+const URL = "http://localhost:3000/exercises";
 const ITEMS_PER_PAGE = 12;
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
   const filteredWorkouts = workouts.filter((workout) => {
     return workout.bodyParts.includes(filter);
-  }); /* console.log(filteredWorkouts); */
+  });
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -51,16 +51,9 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <VideoLoop /> */}
-      <Nav
-        selectFilter={selectFilter}
-      />
+      <Nav selectFilter={selectFilter} />
       <div className="main-content">
-        <Cards
-          workouts={currentWorkouts}
-          showWorkout={showWorkout}
-  
-        />
+        <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
       </div>
       <ModalData
         workouts={workouts}

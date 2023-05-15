@@ -1,4 +1,4 @@
-import FilteredWorkout from "../buttons/FilteredWorkout";
+import FilteredWorkout from "../filtered/FilteredWorkout";
 import "./Nav.css";
 
 const Nav = ({ selectGender, genderToggle, selectFilter }) => {
