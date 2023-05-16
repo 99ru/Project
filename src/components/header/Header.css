@@ -3,22 +3,48 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 75px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
-  top: 10;
+  top: 0;
   width: 100%;
   z-index: 1;
+  padding: 0 1rem; /* Add horizontal padding to create space */
 }
 
-.header-logo > img {
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
   width: 70px;
   padding: 1rem;
-  margin-left: 12px;
+}
+
+.header-logo ul {
+  display: flex;
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.header-logo li {
+  margin-right: 1rem;
+}
+
+.header-logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.header-logo a:hover {
+  color: #ccc;
 }
 
 .profile-logo {
-position: absolute;
-right: 1vh;
-top: 2.5vh;
-cursor: pointer;
-width: 100px;
+  cursor: pointer;
+  width: 100px;
 }

@@ -5,6 +5,24 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.body{
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+footer{
+  margin-top: auto;
+  padding: 30px;
+  color: white;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+
+}
+
 .App {
   text-align: center;
 }
@@ -23,11 +41,11 @@
   flex-wrap: wrap;
   flex-direction: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 .filter-buttons{
   display: flex;
-  
   gap: 8px;
   justify-content: center;
   flex-direction: column;
@@ -36,7 +54,6 @@
 
 .filter-header{
   color: white;
-  font-weight: 600;
 }
 
 ul{
@@ -50,5 +67,6 @@ a{
   text-decoration: none;
   color: white;
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,400&family=Roboto:wght@100;300;400;700&display=swap")

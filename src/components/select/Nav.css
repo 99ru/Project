@@ -1,12 +1,9 @@
 .nav-container {
-   background-image: url("/src/assets/banner.avif");
-   background-size: cover;
-   background-position: center;
-  /* background-color: #4b4b4b;
-  color: #fff; */
+  background-image: url("/src/assets/banner.avif");
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* padding: 8rem; */
-  padding: 8rem 12rem 2rem 10rem;
+  padding: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +11,7 @@
   text-transform: uppercase;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.categories{
-  margin: 2rem;
+.categories {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,12 +25,11 @@
   background-color: #ffffff;
   border: white solid 1px;
   color: rgb(0, 0, 0);
-  /* padding: 5rem; */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 2px;
   font-weight: 600;
-  margin: 6px;
+  margin: 2px;
 }
 .categories button:hover {
   background-color: #131212;

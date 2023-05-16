@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
     <footer>
-      <p>&copy; 2022 | Gymshark Limited | All Rights Reserved | Be a visionary</p>
+      <p>&copy; 2023 | GYM APP | All Rights Reserved | BÄFTA</p>
     </footer>
     </div>
   );
