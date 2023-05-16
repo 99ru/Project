@@ -1,6 +1,6 @@
 import "./modal.css";
 
-const CardModal = ({ modal, toggleModal, workout, genderToggle }) => {
+const CardModal = ({ modal, toggleModal, workout,}) => {
 
   return (
     <>

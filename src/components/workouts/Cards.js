@@ -1,9 +1,10 @@
 import SingleCard from "./SingleCard";
+import React from "react";
 import "./card.css";
 
-const Cards = ({ workouts, showWorkout, genderToggle }) => {
+const Cards = ({ workouts, showWorkout, }) => {
   return (
-    <>
+    <div className="main-content">
       {workouts.map((exercise) => (
         <SingleCard
           key={exercise.id}
@@ -15,10 +16,9 @@ const Cards = ({ workouts, showWorkout, genderToggle }) => {
           equipment={exercise.equipment}
           primaryMuscle={exercise.primaryMuscle}
           showWorkout={showWorkout}
-          genderToggle={genderToggle}
         />
       ))}
-    </>
+    </div>
   );
 };
 
