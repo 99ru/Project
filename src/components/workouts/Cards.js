@@ -3,6 +3,7 @@ import React from "react";
 import "./card.css";
 
 const Cards = ({ workouts, showWorkout, }) => {
+  
   return (
     <div className="main-content">
       {workouts.map((exercise) => (
