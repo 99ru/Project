@@ -4,10 +4,12 @@ import Bmi from "../components/calculator/Bmi"
 const CaloriesPage = () => {
 
   return (
-    <>
+    <div className="calculator-container">
       <Bmi />
       <Calories />
-      </>
+    </div>
+     
+   
   )
 }
 
