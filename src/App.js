@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { FavoritesProvider } from "./FavoritesContext";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WorkoutPage from "./pages/WorkoutPage";
-import HomePage from "./pages/FavouritePage";
+import FavouritePage from "./pages/FavouritePage";
+
 
 import "./App.css";
 import Header from "./components/header/Header";
-import Nav from "./components/select/Nav";
-import Cards from "./components/workouts/Cards";
 import ModalData from "./components/modal/ModalData";
 import Footer from "./components/footer/Footer";
 import Pagination from "@mui/material/Pagination";
-import FavouritePage from "./pages/FavouritePage";
+
 
 const URL = "http://localhost:3000/exercises";
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 16;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);
@@ -58,20 +59,22 @@ function App() {
 
   return (
     <div>
+       <FavoritesProvider>
       <Router>
         <Header />
         <Routes>
-        <Route
-  path="/"
-  element={<WorkoutPage selectFilter={selectFilter} currentWorkouts={currentWorkouts} showWorkout={showWorkout} />}
-/>
+          <Route
+            path="/"
+            element={
+              <WorkoutPage
+                selectFilter={selectFilter}
+                currentWorkouts={currentWorkouts}
+                showWorkout={showWorkout}
+              />
+            }
+          />
           <Route path="/favourites" element={<FavouritePage />} />
         </Routes>
-
-
-
-       {/*  <Nav selectFilter={selectFilter} />
-        <Cards workouts={currentWorkouts} showWorkout={showWorkout} /> */}
         <ModalData
           workouts={workouts}
           modal={modal}
@@ -86,6 +89,7 @@ function App() {
           className="pagination"
         />
       </Router>
+      </FavoritesProvider>
     </div>
   );
 }

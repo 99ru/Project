@@ -16,7 +16,7 @@ const Header = () => {
         </li>
 
         <li>
-          <Link to='/Favourties'>Favourites</Link>
+          <Link to='/favourites'>Favourites</Link>
         </li>
       </ul>
     

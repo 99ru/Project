@@ -1,18 +1,11 @@
-.single-card-container img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  max-width: 100%;
-  width: 100%;
-}
-
 .single-card-container {
-  width: 350px;
+  width: 280px;
   padding-top: 1rem;
   margin: 1rem;
-  background: #3e3e3e0f;
-
+  background: whitesmoke;
+  border-radius: 20px;
+  box-shadow: #00000029 0px 0px 10px;
+  position: relative;
 }
 
 .card-content {
@@ -24,25 +17,51 @@
   text-align: center;
 }
 
-.card-button {
-  background: #000000;
-  color: #fff;
-  font-size: 16px;
+.favorite-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  color: #000;
   cursor: pointer;
-  margin: 6px;
-  padding: 8px 12px 8px 12px;
+  transition: color 0.3s ease;
 }
 
-.card-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+.favorite-icon:hover {
+  color: red;
+}
+
+.favorited {
+  color: red;
+}
+
+.card-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .workout-image {
   width: 100%;
   height: auto;
   mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
 }
 
+.card-button {
+  background: #000000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 6px;
+  padding: 4px 30px 4px 30px;
+  border: none;
+  border-radius: 4px;
+}
 
-
-
+.card-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

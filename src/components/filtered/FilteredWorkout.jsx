@@ -3,9 +3,11 @@ import React from "react";
 const FilteredWorkout = ({ selectFilter }) => {
  
   return (
-    <>
+    <div className="filter-buttons">
+
+    
       <div className="bodypart-buttons">
-        <p>by Bodypart</p>
+        <p className="filter-header">by bodypart</p>
         <button id="" onClick={selectFilter}>All</button>
         <button id="shoulders" onClick={selectFilter}>Shoulders</button>
         <button id="chest" onClick={selectFilter}>Chest</button>
@@ -17,7 +19,7 @@ const FilteredWorkout = ({ selectFilter }) => {
       </div>
 
       <div className="bodypart-buttons">
-        <p>By Equipment</p>
+      <p className="filter-header">by equipment</p>
         <button id="body weight" onClick={selectFilter}>body weight</button>
         <button id="dumbbell" onClick={selectFilter}>dumbbell</button>
         <button id="barbell" onClick={selectFilter}>barbell</button>
@@ -27,7 +29,7 @@ const FilteredWorkout = ({ selectFilter }) => {
         <button id="kettlebell" onClick={selectFilter}>kettlebell</button>
         <button id="assisted" onClick={selectFilter}>assisted</button>
       </div>
-    </>
+      </div>
   );
 };
 

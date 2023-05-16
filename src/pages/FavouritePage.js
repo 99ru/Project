@@ -4,7 +4,7 @@ const FavouritesPage = () => {
 
   return (
     <div>
-    {/* workout comp goes here */}
+    
     </div>
   )
 }

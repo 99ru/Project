@@ -10,7 +10,8 @@
 }
 
 .main-content {
- /*  background-color: whitesmoke; */
+  background-color: #eee;
+  background-color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
   flex-direction: center;
@@ -24,9 +25,30 @@
   justify-content: center;
 }
 
-.bodypart-buttons{
-  /* display: flex;
-  gap: 8px */
+.filter-buttons{
+  display: flex;
+  
+  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.filter-header{
+  color: white;
+  font-weight: 600;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,400&family=Roboto:wght@100;300;400;700&display=swap")
