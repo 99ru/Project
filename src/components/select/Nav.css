@@ -28,8 +28,10 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 2px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif; 
   margin: 2px;
+  padding: 0;
 }
 .categories button:hover {
   background-color: #131212;

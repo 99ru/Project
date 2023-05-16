@@ -49,8 +49,8 @@ const Calories = () => {
   const targetLoseWeight = Math.round((calculateBMR() - 500) / 100) * 100;
 
   return (
-    <div id="bmr-calculator" className="wrapper">
-      <div className="calculator">
+    <div className="calculator bmr-calculator">
+      <div className="calculator-content">
         <div className="choose-gender">
           <div className="segmented-control">
             <input
@@ -100,61 +100,62 @@ const Calories = () => {
           onChange={handleInputChange}
         />
         <label htmlFor="calc-weight" id="calc-weight_value">
-          Weight: {weight} kg
-        </label>
-        <input
-          id="calc-weight"
-          type="range"
-          name="weight"
-          value={weight}
-          min="40"
-          max="200"
-          onChange={handleInputChange}
-        />
-        <label htmlFor="calc-walking" id="calc-walking_value">
-          Walking: {walking} hours per week
-        </label>
-        <input
-          id="calc-walking"
-          type="range"
-          name="walking"
-          value={walking}
-          min="0"
-          max="50"
-          onChange={handleInputChange}
-        />
-        <label htmlFor="calc-cardio" id="calc-cardio_value">
-          Cardio: {cardio} hours per week
-        </label>
-        <input
-          id="calc-cardio"
-          type="range"
-          name="cardio"
-          value={cardio}
-          min="0"
-          max="50"
-          onChange={handleInputChange}
-        />
-      </div>
-      <div className="results">
-        <div id="calc-target-gain">
-          To Gain Weight:
-          <br />
-          <span>{targetGainWeight} calories</span>
-        </div>
-        <div id="calc-target-maintain">
-          To Maintain:
-          <br />
-          <span>{targetMaintain} calories</span>
-        </div>
-        <div id="calc-target-lose">
-          To Lose Weight:
-          <br />
-          <span>{targetLoseWeight} calories</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Calories;
+          Weight: {
+            weight} kg
+            </label>
+            <input
+                   id="calc-weight"
+                   type="range"
+                   name="weight"
+                   value={weight}
+                   min="40"
+                   max="200"
+                   onChange={handleInputChange}
+                 />
+            <label htmlFor="calc-walking" id="calc-walking_value">
+            Walking: {walking} hours per week
+            </label>
+            <input
+                   id="calc-walking"
+                   type="range"
+                   name="walking"
+                   value={walking}
+                   min="0"
+                   max="50"
+                   onChange={handleInputChange}
+                 />
+            <label htmlFor="calc-cardio" id="calc-cardio_value">
+            Cardio: {cardio} hours per week
+            </label>
+            <input
+                   id="calc-cardio"
+                   type="range"
+                   name="cardio"
+                   value={cardio}
+                   min="0"
+                   max="50"
+                   onChange={handleInputChange}
+                 />
+            </div>
+            <div className="results">
+            <div id="calc-target-gain">
+            To Gain Weight:
+            <br />
+            <span>{targetGainWeight} calories</span>
+            </div>
+            <div id="calc-target-maintain">
+            To Maintain:
+            <br />
+            <span>{targetMaintain} calories</span>
+            </div>
+            <div id="calc-target-lose">
+            To Lose Weight:
+            <br />
+            <span>{targetLoseWeight} calories</span>
+            </div>
+            </div>
+            </div>
+            );
+            };
+            
+            export default Calories;
