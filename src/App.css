@@ -24,4 +24,9 @@
   justify-content: center;
 }
 
+.bodypart-buttons{
+  /* display: flex;
+  gap: 8px */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,400&family=Roboto:wght@100;300;400;700&display=swap")

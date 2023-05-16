@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Header from "./components/header/Header";
-import Nav from "./components/nav/Nav";
+import Nav from "./components/select/Nav";
 import Cards from "./components/workouts/Cards";
 import ModalData from "./components/modal/ModalData";
 import Footer from "./components/footer/Footer";
@@ -54,17 +56,20 @@ function App() {
 
   return (
     <div>
+      <Router>
       <Header />
+    
       <Nav selectFilter={selectFilter} />
-      <div className="main-content">
+      
         <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
-      </div>
+    
       <ModalData
         workouts={workouts}
         modal={modal}
         toggleModal={toggleModal}
         selectedWorkout={selectedWorkout}
       />
+      
       <Pagination
         count={Math.ceil(filteredWorkouts.length / ITEMS_PER_PAGE)}
         onChange={handlePageChange}
@@ -72,6 +77,9 @@ function App() {
         color="primary"
         className="pagination"
       />
+     
+      </Router>
+      
     </div>
   );
 }

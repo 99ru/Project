@@ -1,5 +1,5 @@
 .nav-container {
-  background-color: #030303da;
+  background-color: #4b4b4b;
   color: #fff;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   /* padding: 8rem; */
@@ -9,6 +9,7 @@
   align-items: center;
   flex-direction: column;
   text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .categories{
   margin: 2rem;
@@ -29,6 +30,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;  
   border-radius: 2px;
+  font-weight: 600;
 }
 .categories button:hover {
   background-color: #131212;

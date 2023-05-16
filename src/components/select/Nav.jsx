@@ -1,10 +1,9 @@
 import FilteredWorkout from "../filtered/FilteredWorkout";
 import "./Nav.css";
 
-const Nav = ({ selectGender, genderToggle, selectFilter }) => {
+const Nav = ({ selectFilter }) => {
   return (
     <div className="nav-container">
-     
       <div className="nav-categories">
         <div className="categories">
           <FilteredWorkout selectFilter={selectFilter} />
