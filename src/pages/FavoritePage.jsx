@@ -1,14 +1,10 @@
+import React from "react";
 import FavoriteWorkouts from "../components/workouts/FavoriteWorkouts";
 
-
-const FavoritePage = () => {
+const FavoritePage = ({ showWorkout }) => {
   return (
     <div>
-        <h1>Fav page</h1>
-        <h1>Fav page</h1>
-        <h1>Fav page</h1>
-        <h1>Fav page</h1>
-        <FavoriteWorkouts/>
+      <FavoriteWorkouts showWorkout={showWorkout} />
     </div>
   );
 };

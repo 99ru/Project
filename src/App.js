@@ -82,7 +82,8 @@ function App() {
               }
             />
 
-            <Route path="/favorite" element={<FavoritePage />} />
+            <Route path="/favorite" element={<FavoritePage
+              showWorkout={showWorkout} />}  />
             <Route path="/calculator" element={<CaloriesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
           </Routes>

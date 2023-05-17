@@ -2,19 +2,21 @@ import React, { useContext } from "react";
 import { FavoritesContext } from "../../FavoritesContext";
 import SingleCard from "./SingleCard";
 
-const FavoriteWorkouts = () => {
+const FavoriteWorkouts = ({ showWorkout }) => {
   const { favorites } = useContext(FavoritesContext);
 
   return (
-    <div>
+    <>
+    <div className="main-content">
       {favorites.length > 0 ? (
         favorites.map((workout) => (
-          <SingleCard key={workout.id} id={workout.id} name={workout.name} image={workout.image} />
+          <SingleCard key={workout.id} id={workout.id} name={workout.name} image={workout.image} showWorkout={showWorkout} />
         ))
       ) : (
-        <p>No favorite workouts found.</p>
+        <h1> Your favorite list is empty </h1>
       )}
     </div>
+    </>
   );
 };
 

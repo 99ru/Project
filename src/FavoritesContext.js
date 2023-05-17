@@ -32,13 +32,24 @@ export const FavoritesProvider = (props) => {
     });
   };
 
+  const removeFavorite = (workoutId) => {
+    setFavorites((prevFavorites) => {
+      const updatedFavorites = prevFavorites.filter(
+        (favoriteItem) => favoriteItem.id !== workoutId
+      );
+
+      saveFavoritesToLocalStorage(updatedFavorites);
+      return updatedFavorites;
+    });
+  };
+
   useEffect(() => {
     console.log("Current favorite items:", favorites);
   }, [favorites]);
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, addFavorite }}
+      value={{ favorites, addFavorite, removeFavorite }}
     >
       {props.children}
     </FavoritesContext.Provider>
