@@ -85,7 +85,9 @@ function App() {
             <Route path="/favorite" element={<FavoritePage
               showWorkout={showWorkout} />}  />
             <Route path="/calculator" element={<CaloriesPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile" element={<ProfilePage workouts={workouts} />} />
+
+
           </Routes>
           <ModalData
             workouts={workouts}

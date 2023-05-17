@@ -44,7 +44,7 @@ export const FavoritesProvider = (props) => {
   };
 
   useEffect(() => {
-    console.log("Current favorite items:", favorites);
+    /* console.log("Current favorite items:", favorites); */
   }, [favorites]);
 
   return (
