@@ -54,7 +54,6 @@
   height: auto;
   mix-blend-mode: multiply;
   position: relative;
-  z-index: 1;
 }
 
 .card-button {

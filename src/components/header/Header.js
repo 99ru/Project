@@ -13,7 +13,7 @@ const Header = () => {
             <Link to="/">Browse</Link>
           </li>
           <li>
-            <Link to="/favourites">Favourites</Link>
+            <Link to="/favorite">Favorite</Link>
           </li>
           <li>
             <Link to="/calculator">Calculator</Link>
@@ -21,7 +21,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="profile-logo">
-        <img src={Profile} alt="profile page" />
+      <Link to="/profile">
+      <img src={Profile} alt="profile page" />
+      </Link>
+       
       </div>
     </div>
   );

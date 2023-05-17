@@ -5,26 +5,28 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import "./card.css";
 
 const SingleCard = ({ name, image, showWorkout, id }) => {
-  const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
+  const { favorites, addFavorite } = useContext(FavoritesContext);
 
-  const isFavorite = favorites.includes(id);
+  const isFavorite = favorites.some((favoriteItem) => favoriteItem.id === id);
 
-  const handleToggleFavorite = () => {
-    if (isFavorite) {
-      removeFavorite(id);
-    } else {
-      addFavorite(id);
-    }
+
+  const handleAddFavorite = () => {
+    console.log('Adding favorite for workout with id:', id);
+    const workout = {
+      id,
+      name,
+      image,
+    };
+    console.log('Workout to add:', workout);
+    addFavorite(workout);
   };
+  
 
   return (
     <div className="single-card-container">
       <div className="card-image">
         <img src={image} alt={name} className="workout-image" />
-        <div
-          className={`favorite-icon ${isFavorite ? "favorited" : ""}`}
-          onClick={handleToggleFavorite}
-        >
+        <div className="favorite-icon" onClick={handleAddFavorite}>
           {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </div>
       </div>

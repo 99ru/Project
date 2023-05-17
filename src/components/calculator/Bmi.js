@@ -47,7 +47,7 @@ const Bmi = () => {
           name="weight"
           id="calc-weight"
           value={weight}
-          placeholder="Enter your weight in kilograms"
+          placeholder="Enter your weight"
           onChange={handleInputChange}
           required
         />
@@ -57,7 +57,7 @@ const Bmi = () => {
           name="height"
           id="calc-height"
           value={height}
-          placeholder="Enter your height in centimeters"
+          placeholder="Enter your height"
           onChange={handleInputChange}
           required
         />

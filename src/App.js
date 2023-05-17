@@ -3,16 +3,16 @@ import { FavoritesProvider } from "./FavoritesContext";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WorkoutPage from "./pages/WorkoutPage";
-import FavouritePage from "./pages/FavouritePage";
+import FavoritePage from "./pages/FavoritePage";
 import CaloriesPage from "./pages/CaloriesPage";
+import ProfilePage from "./pages/ProfilePage";
 
 import "./App.css";
 import Header from "./components/header/Header";
 import ModalData from "./components/modal/ModalData";
-/* import Footer from "./components/footer/Footer"; */
 import Pagination from "@mui/material/Pagination";
 
-const URL = "http://localhost:3000/exercises";
+const URL = "http://localhost:6969/exercises";
 const ITEMS_PER_PAGE = 18;
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
       workout.bodyParts.includes(filter) || workout.equipment.includes(filter)
     );
   });
-  console.log(filteredWorkouts);
+  /* console.log(filteredWorkouts); */
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -81,8 +81,10 @@ function App() {
                 </>
               }
             />
-            <Route path="/favourites" element={<FavouritePage />} />
+
+            <Route path="/favorite" element={<FavoritePage />} />
             <Route path="/calculator" element={<CaloriesPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
           <ModalData
             workouts={workouts}
@@ -93,7 +95,7 @@ function App() {
         </Router>
       </FavoritesProvider>
       <footer>
-      <p>&copy; 2023 | GYM APP | All Rights Reserved | BÄFTA</p>
+        <p>&copy; 2023 | GYM APP | All Rights Reserved | BÄFTA</p>
       </footer>
     </div>
   );

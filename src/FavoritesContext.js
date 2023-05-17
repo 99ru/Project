@@ -1,29 +1,46 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const FavoritesContext = createContext();
 
-export const FavoritesProvider = ({ children }) => {
-  const [favorites, setFavorites] = useState([]);
+const saveFavoritesToLocalStorage = (favorites) => {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+};
 
-  const addFavorite = (workoutId) => {
-    setFavorites((prevFavorites) => [...prevFavorites, workoutId]);
+export const FavoritesProvider = (props) => {
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem("favorites");
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
+
+  const addFavorite = (workout) => {
+    setFavorites((prevFavorites) => {
+      const existingItem = prevFavorites.find(
+        (favoriteItem) => favoriteItem.id === workout.id
+      );
+
+      let updatedFavorites;
+      if (existingItem) {
+        // If the workout is already in favorites, do nothing
+        updatedFavorites = prevFavorites;
+      } else {
+        // If the workout isn't in favorites, add it
+        updatedFavorites = [...prevFavorites, workout];
+      }
+
+      saveFavoritesToLocalStorage(updatedFavorites);
+      return updatedFavorites;
+    });
   };
 
-  const removeFavorite = (workoutId) => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.filter((id) => id !== workoutId)
-    );
-  };
+  useEffect(() => {
+    console.log("Current favorite items:", favorites);
+  }, [favorites]);
 
   return (
     <FavoritesContext.Provider
-      value={{
-        favorites,
-        addFavorite,
-        removeFavorite,
-      }}
+      value={{ favorites, addFavorite }}
     >
-      {children}
+      {props.children}
     </FavoritesContext.Provider>
   );
 };
