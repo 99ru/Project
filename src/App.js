@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WorkoutPage from "./pages/WorkoutPage";
 import FavoritePage from "./pages/FavoritePage";
 import CaloriesPage from "./pages/CaloriesPage";
-import WorkoutPlanner from "./pages/PlannerPage";
+import Planner from "./pages/PlannerPage";
 
 import "./App.css";
 import Header from "./components/header/Header";
@@ -85,7 +85,7 @@ function App() {
             <Route path="/favorite" element={<FavoritePage
               showWorkout={showWorkout} />}  />
             <Route path="/calculator" element={<CaloriesPage />} />
-            <Route path="/planner" element={<WorkoutPlanner workouts={workouts} />} />
+            <Route path="/planner" element={<Planner workouts={workouts} showWorkout={showWorkout} />} />
 
 
           </Routes>

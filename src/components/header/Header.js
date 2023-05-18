@@ -10,16 +10,16 @@ const Header = () => {
         <img src={Logo} alt="gymshark logo" />
         <ul>
           <li>
-            <Link to="/">Browse</Link>
+            <Link to="/">Workouts</Link>
           </li>
           <li>
             <Link to="/favorite">Favorite</Link>
           </li>
           <li>
-            <Link to="/calculator">Calculator</Link>
+            <Link to="/planner">Planner</Link>
           </li>
           <li>
-            <Link to="/planner">Planner</Link>
+            <Link to="/calculator">Calculator</Link>
           </li>
         </ul>
       </div>

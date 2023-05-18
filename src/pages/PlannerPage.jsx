@@ -1,11 +1,11 @@
-import WorkoutPlanner from '../components/planner/WorkoutPlanner'
+import Planner from '../components/planner/Planner'
 
-const ProfilePage = ({ workouts }) => {
+const PlannerPage = ({ workouts, showWorkout}) => {
   return (
     <>
-    <WorkoutPlanner workouts={workouts} />
+    <Planner workouts={workouts} showWorkout={showWorkout} />
     </>
   )
 }
 
-export default ProfilePage
+export default PlannerPage

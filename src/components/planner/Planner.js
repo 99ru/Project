@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
-import WorkoutPlan from './SingleWorkoutPlan';
+import SinglePlan from './SinglePlan';
 import './planner.css';
 
-const WorkoutPlanner = ({ workouts }) => {
+const Planner = ({ workouts, showWorkout }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [workoutPlans, setWorkoutPlans] = useState([]);
   const [newPlanName, setNewPlanName] = useState('');
@@ -34,6 +34,22 @@ const WorkoutPlanner = ({ workouts }) => {
     localStorage.setItem('workoutPlans', JSON.stringify(newPlans));
   };
 
+  const deletePlan = (planId) => {
+    const newPlans = workoutPlans.filter(plan => plan.id !== planId);
+    setWorkoutPlans(newPlans);
+    localStorage.setItem('workoutPlans', JSON.stringify(newPlans));
+  };
+
+  const deleteWorkout = (planId, workoutId) => {
+    const newPlans = workoutPlans.map(plan =>
+      plan.id === planId
+        ? { ...plan, workouts: plan.workouts.filter(workout => workout.id !== workoutId) }
+        : plan
+    );
+    setWorkoutPlans(newPlans);
+    localStorage.setItem('workoutPlans', JSON.stringify(newPlans));
+  };
+
   useEffect(() => {
     const storedPlans = localStorage.getItem('workoutPlans');
     if (storedPlans) {
@@ -44,8 +60,6 @@ const WorkoutPlanner = ({ workouts }) => {
   
 
   return (
-
-  
     <div className="wrapper">
     <div className="planner">
     {errorMessage && <p className="error-message">{errorMessage}</p>}
@@ -56,15 +70,18 @@ const WorkoutPlanner = ({ workouts }) => {
       onChange={e => setNewPlanName(e.target.value)}
       className="planner-input" 
     />
-    <button onClick={addPlan} className="planner-button">Create Plan</button> 
+    <button onClick={addPlan} className="planner-create-button">Create Plan</button> 
 
     <div className="workout-plans">
     {workoutPlans.map(plan => (
-      <WorkoutPlan
+      <SinglePlan
         key={plan.id}
         plan={plan}
         workouts={workouts}
         addWorkoutToPlan={addWorkoutToPlan}
+        deletePlan={deletePlan}
+        deleteWorkout={deleteWorkout}
+        showWorkout={showWorkout}
       />
     ))}
     
@@ -74,4 +91,4 @@ const WorkoutPlanner = ({ workouts }) => {
   ); 
 };
 
-export default WorkoutPlanner;
+export default Planner;
