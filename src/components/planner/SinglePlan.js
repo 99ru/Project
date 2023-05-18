@@ -12,7 +12,8 @@ const SinglePlan = ({
   deletePlan,
   deleteWorkout,
   showWorkout,
-  
+  updateWorkoutReps,
+  updateWorkoutSets,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showOptions, setShowOptions] = useState(false);
@@ -96,7 +97,6 @@ const SinglePlan = ({
                     src={workout.image}
                     alt={workout.name}
                     className="search-result-image"
-                    
                   />
                   <span className="search-result-name">{workout.name}</span>
                 </div>
@@ -115,13 +115,35 @@ const SinglePlan = ({
             onClick={() => showWorkout(workout.id)}
           />
           <p className="workout-item-name">{workout.name}</p>
+          <p className="workout-item-sets-reps">
+            {workout.sets}x{workout.reps}{" "}
+          </p>
+
           {editing && (
-            <button
-              onClick={() => deleteWorkout(plan.id, workout.id)}
-              className="delete-button"
-            >
-              <ClearRoundedIcon />
-            </button>
+            <>
+              <input
+                type="number"
+                value={workout.sets}
+                onChange={(e) =>
+                  updateWorkoutSets(plan.id, workout.id, Number(e.target.value))
+                }
+                label="Sets"
+              />
+              <input
+                type="number"
+                value={workout.reps}
+                onChange={(e) =>
+                  updateWorkoutReps(plan.id, workout.id, Number(e.target.value))
+                }
+                label="Reps"
+              />
+              <button
+                onClick={() => deleteWorkout(plan.id, workout.id)}
+                className="delete-button"
+              >
+                <ClearRoundedIcon />
+              </button>
+            </>
           )}
         </div>
       ))}
