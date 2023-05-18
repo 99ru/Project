@@ -3,11 +3,10 @@ import WorkoutPlan from './WorkoutPlan';
 import './profile.css';
 
 const Profile = ({ workouts }) => {
+  const [errorMessage, setErrorMessage] = useState('');
   const [workoutPlans, setWorkoutPlans] = useState([]);
   const [newPlanName, setNewPlanName] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-
+  
   const addPlan = () => {
     if (newPlanName.length < 3) {
       setErrorMessage("Plan name must be at least 3 characters long.");
