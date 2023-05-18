@@ -34,7 +34,7 @@ footer{
   flex-wrap: wrap;
   flex-direction: center;
   justify-content: center;
-  margin-top: 1rem;
+ /*  margin-top: 1rem; */
 }
 
 .pagination {
