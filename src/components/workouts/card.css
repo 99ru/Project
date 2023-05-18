@@ -1,5 +1,5 @@
 .single-card-container {
-  width: 240px;
+  width: 340px;
   margin: 1rem;
   background: whitesmoke;
   border-radius: 8px;
@@ -17,7 +17,7 @@
   background-color: rgb(255, 255, 255);
   border: #e6e0e0 solid 1px;
   box-shadow: #00000029 0px 0px 10px;
-  height: 120px;
+  height: 80px;
   text-align: center;
   font-size: 14px;
   padding: 1rem;

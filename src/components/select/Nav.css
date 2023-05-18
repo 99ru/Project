@@ -1,7 +1,9 @@
 .nav-container {
-  background-image: url("https://images.ctfassets.net/8urtyqugdt2l/5dlGpPoQZMuejdMMyTcamF/dd3f3f493f3f385e5cccc1e85787edde/HEADER_1800x600.jpg");
+  /* background-image: url("https://images.ctfassets.net/8urtyqugdt2l/5dlGpPoQZMuejdMMyTcamF/dd3f3f493f3f385e5cccc1e85787edde/HEADER_1800x600.jpg"); */
+ /*  background-image: url("https://images.ctfassets.net/wl6q2in9o7k3/2mfASRYkQuzQkxjsEQLXel/4d7f3fabd580f44f124b8c51858eab3e/GY79415_SLC-005_INTL_Web_Banner_Desktop_3800x1700px_Dual.jpg?w=3840&q=90"); */
+  background-image: url("../../assets/bnr.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   padding: 8rem;
   display: flex;

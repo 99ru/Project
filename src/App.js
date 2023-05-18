@@ -13,7 +13,7 @@ import ModalData from "./components/modal/ModalData";
 import Pagination from "@mui/material/Pagination";
 
 const URL = "http://localhost:6969/exercises";
-const ITEMS_PER_PAGE = 18;
+const ITEMS_PER_PAGE = 14;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);

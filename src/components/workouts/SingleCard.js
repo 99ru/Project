@@ -4,11 +4,11 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import "./card.css";
 
-const SingleCard = ({ name, image, showWorkout, id, }) => {
-  const { favorites, addFavorite, removeFavorite  } = useContext(FavoritesContext);
+const SingleCard = ({ name, image, showWorkout, id }) => {
+  const { favorites, addFavorite, removeFavorite } =
+    useContext(FavoritesContext);
 
   const isFavorite = favorites.some((favoriteItem) => favoriteItem.id === id);
-
 
   const handleToggleFavorite = () => {
     if (isFavorite) {
@@ -23,8 +23,6 @@ const SingleCard = ({ name, image, showWorkout, id, }) => {
     }
   };
 
-  
-
   return (
     <div className="single-card-container">
       <div className="card-image">
@@ -36,7 +34,7 @@ const SingleCard = ({ name, image, showWorkout, id, }) => {
       <div className="card-content">
         <h3>{name}</h3>
         <button onClick={() => showWorkout(id)} className="card-button">
-          Details
+          Show
         </button>
       </div>
     </div>
