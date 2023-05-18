@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './profile.css'
+import './planner.css'
 
 const WorkoutPlan = ({ plan, workouts, addWorkoutToPlan }) => {
   const [searchTerm, setSearchTerm] = useState('');

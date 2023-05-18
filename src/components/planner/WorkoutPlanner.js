@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
-import WorkoutPlan from './WorkoutPlan';
-import './profile.css';
+import WorkoutPlan from './SingleWorkoutPlan';
+import './planner.css';
 
-const Profile = ({ workouts }) => {
+const WorkoutPlanner = ({ workouts }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [workoutPlans, setWorkoutPlans] = useState([]);
   const [newPlanName, setNewPlanName] = useState('');
@@ -47,16 +47,16 @@ const Profile = ({ workouts }) => {
 
   
     <div className="wrapper">
-    <div className="profile">
+    <div className="planner">
     {errorMessage && <p className="error-message">{errorMessage}</p>}
     <input
       type="text"
       placeholder="New plan name"
       value={newPlanName}
       onChange={e => setNewPlanName(e.target.value)}
-      className="profile-input" 
+      className="planner-input" 
     />
-    <button onClick={addPlan} className="profile-button">Create Plan</button> 
+    <button onClick={addPlan} className="planner-button">Create Plan</button> 
 
     <div className="workout-plans">
     {workoutPlans.map(plan => (
@@ -74,4 +74,4 @@ const Profile = ({ workouts }) => {
   ); 
 };
 
-export default Profile;
+export default WorkoutPlanner;
