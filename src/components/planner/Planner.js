@@ -25,7 +25,7 @@ const Planner = ({ workouts, showWorkout }) => {
   };
 
   const addWorkoutToPlan = (planId, workout) => {
-    const workoutWithSetsAndReps = { ...workout, sets: 0, reps: 10 };
+    const workoutWithSetsAndReps = { ...workout, sets: 1, reps: 10 };
     const newPlans = workoutPlans.map((plan) =>
       plan.id === planId
         ? { ...plan, workouts: [...plan.workouts, workoutWithSetsAndReps] }
