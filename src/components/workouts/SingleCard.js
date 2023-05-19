@@ -28,11 +28,11 @@ const SingleCard = ({ name, image, showWorkout, id }) => {
     <div className="single-card-container">
       <div className="card-image">
         <img src={image} alt={name} className="workout-image" />
-       {/*  <img src={test} alt={name} className="workout-image" /> */}
         <div className="favorite-icon" onClick={handleToggleFavorite}>
           {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </div>
       </div>
+      
       <div className="card-content">
         <h3>{name}</h3>
         <button onClick={() => showWorkout(id)} className="card-button">

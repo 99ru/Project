@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   /* padding: 20px; */
+  background: white;
 }
 
 .planner {
@@ -65,6 +66,8 @@
   background: transparent;
 }
 
+
+
 .workout-plans {
   display: flex;
   flex-wrap: wrap;
@@ -73,16 +76,18 @@
   width: 100%;
 }
 
+
+
 .workout-plan {
-  min-width: 450px;
-  /* background: whitesmoke; */
-  background: #88ccd9;
+  min-width: 500px;
   border-radius: 8px;
   box-shadow: #00000029 0px 0px 10px;
   position: relative;
   font-size: 1rem;
   padding: 20px;
-}
+  margin: 1rem;
+  border: 1px solid #ccc;
+} 
 
 .workout-plan-title {
   margin-bottom: 10px;
@@ -254,8 +259,8 @@
 
 .icon-buttons {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   display: flex;
   gap: 10px;
 }

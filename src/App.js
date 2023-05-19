@@ -9,11 +9,13 @@ import Planner from "./pages/PlannerPage";
 
 import "./App.css";
 import Header from "./components/header/Header";
+import VideoLoop from "./components/video/VideoLoop";
 import ModalData from "./components/modal/ModalData";
 import Pagination from "@mui/material/Pagination";
+import Footer from "./components/footer/Footer";
 
 const URL = "http://localhost:6969/exercises";
-const ITEMS_PER_PAGE = 14;
+const ITEMS_PER_PAGE = 12;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);
@@ -61,6 +63,7 @@ function App() {
       <FavoritesProvider>
         <Router>
           <Header />
+          <VideoLoop />
           <Routes>
             <Route
               path="/"
@@ -97,9 +100,7 @@ function App() {
           />
         </Router>
       </FavoritesProvider>
-      <footer>
-        <p>&copy; 2023 | GYM APP | All Rights Reserved | BÄFTA</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
