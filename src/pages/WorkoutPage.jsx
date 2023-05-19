@@ -4,9 +4,12 @@ import Cards from "../components/workouts/Cards";
 
 const WorkoutsPage = ({ selectFilter, currentWorkouts, showWorkout }) => {
   return (
-    <div>
+    <div /* className="main-content" */>
       <Hero selectFilter={selectFilter} />
+      <div className="main-content">
       <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
+      </div>
+      
     </div>
   );
 };

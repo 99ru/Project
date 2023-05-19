@@ -21,16 +21,14 @@
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
-  width: 50rem;
-  line-height: 1.5;
-  border-radius: 4px;
+  width: 60rem;
+  line-height: 1.7;
 }
 
 .modal-content img {
   max-width: 40vh;
- /*  margin: 15px; */ 
+  margin: 15px; 
   color: #fff;
-  
 }
 
 .modal-content button {
@@ -38,20 +36,22 @@
   font-weight: 400;
   background: #000000;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 0px;
   cursor: pointer; 
   color: #fff;
   border: none;
   position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 16px;
+  top: 10px;
+  right: 30px;
 }
 
 .modal-content button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal-description{
+  font-size: 15px;
+}
 
 
 

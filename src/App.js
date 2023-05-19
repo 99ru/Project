@@ -59,16 +59,17 @@ function App() {
   }, []);
 
   return (
-    <div className="body">
+    <div>
       <FavoritesProvider>
         <Router>
           <Header />
-          <VideoLoop />
           <Routes>
             <Route
               path="/"
               element={
                 <>
+                  <VideoLoop />
+                 {/*  <Hero /> */}
                   <WorkoutPage
                     selectFilter={selectFilter}
                     currentWorkouts={currentWorkouts}
@@ -85,12 +86,17 @@ function App() {
               }
             />
 
-            <Route path="/favorite" element={<FavoritePage
-              showWorkout={showWorkout} />}  />
+            <Route
+              path="/favorite"
+              element={<FavoritePage showWorkout={showWorkout} />}
+            />
             <Route path="/calculator" element={<CaloriesPage />} />
-            <Route path="/planner" element={<Planner workouts={workouts} showWorkout={showWorkout} />} />
-
-
+            <Route
+              path="/planner"
+              element={
+                <Planner workouts={workouts} showWorkout={showWorkout} />
+              }
+            />
           </Routes>
           <ModalData
             workouts={workouts}
