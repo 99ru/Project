@@ -1,7 +1,7 @@
 import FilteredWorkout from "../filtered/FilteredWorkout";
-import "./Nav.css";
+import "./hero.css";
 
-const Nav = ({ selectFilter }) => {
+const Hero = ({ selectFilter }) => {
   return (
     <div className="nav-container">
       <div className="nav-categories">
@@ -9,9 +9,8 @@ const Nav = ({ selectFilter }) => {
           <FilteredWorkout selectFilter={selectFilter} />
         </div>
       </div>
-    
     </div>
   );
 };
 
-export default Nav;
+export default Hero;
