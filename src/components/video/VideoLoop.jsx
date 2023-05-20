@@ -9,9 +9,9 @@ const VideoLoop = () => {
       </video>
 
       <section>
-        <h1>Start your gym jounrey</h1>
+        <h1>START YOUR GYM JOUNREY</h1>
         <h3>browse through 1300 workouts</h3>
-        <button>BEGIN</button>
+        <button>GET STARTED</button>
       </section>
     </div>
   );

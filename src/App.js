@@ -15,7 +15,7 @@ import Pagination from "@mui/material/Pagination";
 import Footer from "./components/footer/Footer";
 
 const URL = "http://localhost:6969/exercises";
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 20;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);
@@ -69,18 +69,10 @@ function App() {
               element={
                 <>
                   <VideoLoop />
-                 {/*  <Hero /> */}
                   <WorkoutPage
                     selectFilter={selectFilter}
                     currentWorkouts={currentWorkouts}
                     showWorkout={showWorkout}
-                  />
-                  <Pagination
-                    count={Math.ceil(filteredWorkouts.length / ITEMS_PER_PAGE)}
-                    onChange={handlePageChange}
-                    variant="outlined"
-                    color="primary"
-                    className="pagination"
                   />
                 </>
               }

@@ -3,7 +3,7 @@ import FavoriteWorkouts from "../components/workouts/FavoriteWorkouts";
 
 const FavoritePage = ({ showWorkout }) => {
   return (
-    <div>
+    <div className="favorite-container">
       <FavoriteWorkouts showWorkout={showWorkout} />
     </div>
   );

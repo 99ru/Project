@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 20px; */
-  background: white;
+  /* background: white; */
+  min-height: 100vh;
 }
 
 .planner {
@@ -48,6 +48,7 @@
     /* background: whitesmoke; */
     background: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 .options {
@@ -64,6 +65,7 @@
   cursor: pointer;
   border:none;
   background: transparent;
+  padding: 0;
 }
 
 
@@ -102,7 +104,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  border-bottom: 1px solid #e1e1e1
+ 
 }
 
 .workout-item-content {
@@ -110,7 +113,7 @@
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .workout-item-sets-reps {
@@ -129,9 +132,6 @@
   width: 100%;
   padding: 2px;
 }
-
-
-
 
 .search-results {
   margin-top: 10px;
@@ -203,12 +203,6 @@
   margin-bottom: 10px;
 }
 
-.workout-item {
-  display: flex;
-  align-items: center;
-  /* gap: 10px; */
-}
-
 .workout-item-image {
   height: 70px;
   object-fit: cover;
@@ -225,7 +219,7 @@
   padding: 10px;
   width: 200px;
   right: 0;
-  top: 30px; /* adjust this as needed */
+  top: 45px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
   cursor: pointer;
@@ -255,14 +249,16 @@
     /* background: whitesmoke; */
     background: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 .icon-buttons {
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 1rem;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .workout-item-sets-reps{
  color: rgb(0, 0, 0);
