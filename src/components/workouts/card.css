@@ -5,10 +5,10 @@
   height: auto;
   max-width: 100%;
   width: 100%;
-    
 }
 
 .single-card-container {
+  position: relative;
   width: 350px;
   padding-top: 1rem;
   margin: 1rem;
@@ -16,12 +16,8 @@
 }
 
 .card-content {
- 
-  /* background-color: rgb(255, 255, 255); */
-  /*   box-shadow: #12121229 0px 0px 10px; */
-  padding: 1rem;
+  /* padding: 1rem; */   /* add this back if knappen yeetar åt helvete */
   text-align: center;
-
   height: 80px;
 }
 
@@ -31,14 +27,30 @@
     font-size: 1rem;
     cursor: pointer;
     border: none;
+    border-radius: 0;
     margin: 6px;
-    padding: 8px 2rem;
+    padding: 6px 2rem;
     gap: 10px;
+    text-transform: capitalize;
 }
 
 .card-button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.favorite-icon {
+  color: #121212;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+}
 
+.card-image {
+  position: relative;
+}
 
+.favorite-icon {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./planner.css";
 import EditNoteRoundedIcon from "@mui/icons-material/EditNoteRounded";
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import SearchIcon from '@mui/icons-material/Search';
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
 import DownloadDoneRoundedIcon from "@mui/icons-material/DownloadDoneRounded";
 
@@ -48,7 +48,7 @@ const SinglePlan = ({
 
       <div className="icon-buttons">
         <button onClick={handleAdd} className="add-workout">
-          <AddRoundedIcon />
+          <SearchIcon />
         </button>
 
         {!editing ? (

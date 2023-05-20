@@ -7,15 +7,23 @@ const FavoriteWorkouts = ({ showWorkout }) => {
 
   return (
     <>
-    <div className="main-content">
-      {favorites.length > 0 ? (
-        favorites.map((workout) => (
-          <SingleCard key={workout.id} id={workout.id} name={workout.name} image={workout.image} showWorkout={showWorkout} />
-        ))
-      ) : (
-        <h1> Your favorite list is empty </h1>
-      )}
-    </div>
+      <div className="main-content">
+        {favorites.length > 0 ? (
+          <>
+            {favorites.map((workout) => (
+              <SingleCard
+                key={workout.id}
+                id={workout.id}
+                name={workout.name}
+                image={workout.image}
+                showWorkout={showWorkout}
+              />
+            ))}
+          </>
+        ) : (
+          <h1>Your favorite list is empty</h1>
+        )}
+      </div>
     </>
   );
 };
