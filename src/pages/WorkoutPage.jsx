@@ -1,12 +1,15 @@
 import React from "react";
-import Nav from "../components/select/Nav";
+import Hero from "../components/hero/Hero";
 import Cards from "../components/workouts/Cards";
 
 const WorkoutsPage = ({ selectFilter, currentWorkouts, showWorkout }) => {
   return (
-    <div>
-      <Nav selectFilter={selectFilter} />
+    <div /* className="main-content" */>
+      <Hero selectFilter={selectFilter} />
+      <div className="main-content">
       <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
+      </div>
+      
     </div>
   );
 };

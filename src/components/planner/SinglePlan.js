@@ -12,7 +12,8 @@ const SinglePlan = ({
   deletePlan,
   deleteWorkout,
   showWorkout,
-  
+  updateWorkoutReps,
+  updateWorkoutSets,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showOptions, setShowOptions] = useState(false);
@@ -96,7 +97,6 @@ const SinglePlan = ({
                     src={workout.image}
                     alt={workout.name}
                     className="search-result-image"
-                    
                   />
                   <span className="search-result-name">{workout.name}</span>
                 </div>
@@ -106,25 +106,52 @@ const SinglePlan = ({
         </div>
       )}
 
-      {plan.workouts.map((workout) => (
-        <div key={workout.id} className="workout-item">
-          <img
-            src={workout.image}
-            alt={workout.name}
-            className="workout-item-image"
-            onClick={() => showWorkout(workout.id)}
-          />
-          <p className="workout-item-name">{workout.name}</p>
-          {editing && (
-            <button
-              onClick={() => deleteWorkout(plan.id, workout.id)}
-              className="delete-button"
-            >
-              <ClearRoundedIcon />
-            </button>
-          )}
-        </div>
-      ))}
+{plan.workouts.map((workout) => (
+  <div key={workout.id} className="workout-item">
+    <img
+      src={workout.image}
+      alt={workout.name}
+      className="workout-item-image"
+      onClick={() => showWorkout(workout.id)}
+    />
+    <div className="workout-item-content">
+      <p className="workout-item-name">{workout.name}</p>
+      <div className="workout-item-sets-reps">
+        {editing ? (
+          <>
+            <label>Sets</label>
+            <input
+              type="number"
+              value={workout.sets}
+              onChange={(e) =>
+                updateWorkoutSets(plan.id, workout.id, Number(e.target.value))
+              }
+            />
+            <label>Reps</label>
+            <input
+              type="number"
+              value={workout.reps}
+              onChange={(e) =>
+                updateWorkoutReps(plan.id, workout.id, Number(e.target.value))
+              }
+            />
+          </>
+        ) : (
+          `${workout.sets}x${workout.reps}`
+        )}
+      </div>
+      {editing && (
+        <button
+          onClick={() => deleteWorkout(plan.id, workout.id)}
+          className="delete-button"
+        >
+          <ClearRoundedIcon />
+        </button>
+      )}
+    </div>
+  </div>
+))}
+
     </div>
   );
 };

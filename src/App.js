@@ -9,11 +9,13 @@ import Planner from "./pages/PlannerPage";
 
 import "./App.css";
 import Header from "./components/header/Header";
+import VideoLoop from "./components/video/VideoLoop";
 import ModalData from "./components/modal/ModalData";
 import Pagination from "@mui/material/Pagination";
+import Footer from "./components/footer/Footer";
 
 const URL = "http://localhost:6969/exercises";
-const ITEMS_PER_PAGE = 18;
+const ITEMS_PER_PAGE = 20;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);
@@ -57,7 +59,7 @@ function App() {
   }, []);
 
   return (
-    <div className="body">
+    <div>
       <FavoritesProvider>
         <Router>
           <Header />
@@ -66,28 +68,27 @@ function App() {
               path="/"
               element={
                 <>
+                  <VideoLoop />
                   <WorkoutPage
                     selectFilter={selectFilter}
                     currentWorkouts={currentWorkouts}
                     showWorkout={showWorkout}
                   />
-                  <Pagination
-                    count={Math.ceil(filteredWorkouts.length / ITEMS_PER_PAGE)}
-                    onChange={handlePageChange}
-                    variant="outlined"
-                    color="primary"
-                    className="pagination"
-                  />
                 </>
               }
             />
 
-            <Route path="/favorite" element={<FavoritePage
-              showWorkout={showWorkout} />}  />
+            <Route
+              path="/favorite"
+              element={<FavoritePage showWorkout={showWorkout} />}
+            />
             <Route path="/calculator" element={<CaloriesPage />} />
-            <Route path="/planner" element={<Planner workouts={workouts} showWorkout={showWorkout} />} />
-
-
+            <Route
+              path="/planner"
+              element={
+                <Planner workouts={workouts} showWorkout={showWorkout} />
+              }
+            />
           </Routes>
           <ModalData
             workouts={workouts}
@@ -97,9 +98,7 @@ function App() {
           />
         </Router>
       </FavoritesProvider>
-      <footer>
-        <p>&copy; 2023 | GYM APP | All Rights Reserved | BÄFTA</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

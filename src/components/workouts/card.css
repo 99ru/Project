@@ -1,72 +1,44 @@
+.single-card-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+    
+}
+
 .single-card-container {
-  width: 240px;
+  width: 350px;
+  padding-top: 1rem;
   margin: 1rem;
-  background: whitesmoke;
-  border-radius: 8px;
-  box-shadow: #00000029 0px 0px 10px;
-  position: relative;
-  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-  background-color: rgb(255, 255, 255);
-  border: #e6e0e0 solid 1px;
-  box-shadow: #00000029 0px 0px 10px;
-  height: 120px;
-  text-align: center;
-  font-size: 14px;
+ 
+  /* background-color: rgb(255, 255, 255); */
+  /*   box-shadow: #12121229 0px 0px 10px; */
   padding: 1rem;
-}
+  text-align: center;
 
-.favorite-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px;
-  color: #000;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.favorite-icon:hover {
-  color: red;
-}
-
-.favorited {
-  color: red;
-}
-
-.card-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.workout-image {
-  width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
-  position: relative;
+  height: 80px;
 }
 
 .card-button {
-  background: #000000;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 6px;
-  padding: 4px 30px 4px 30px;
-  border: none;
-  border-radius: 4px;
+    background: #121212;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin: 6px;
+    padding: 8px 2rem;
+    gap: 10px;
 }
 
 .card-button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+
