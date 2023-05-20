@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FavoritesProvider } from "./FavoritesContext";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WorkoutPage from "./pages/WorkoutPage";
+import WorkoutsPage from "./pages/WorkoutsPage";
 import FavoritePage from "./pages/FavoritePage";
 import CaloriesPage from "./pages/CaloriesPage";
 import Planner from "./pages/PlannerPage";
@@ -11,18 +11,15 @@ import "./App.css";
 import Header from "./components/header/Header";
 import VideoLoop from "./components/video/VideoLoop";
 import ModalData from "./components/modal/ModalData";
-import Pagination from "@mui/material/Pagination";
 import Footer from "./components/footer/Footer";
 
 const URL = "http://localhost:6969/exercises";
-const ITEMS_PER_PAGE = 20;
 
 function App() {
   const [workouts, setWorkouts] = useState([]);
   const [filter, setFilter] = useState("");
   const [modal, setModal] = useState(false);
   const [selectedWorkout, setSelectedWorkout] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
 
   const selectFilter = (e) => setFilter(e.target.id);
   const toggleModal = () => setModal(!modal);
@@ -36,18 +33,6 @@ function App() {
       workout.bodyParts.includes(filter) || workout.equipment.includes(filter)
     );
   });
-  /* console.log(filteredWorkouts); */
-
-  const handlePageChange = (event, value) => {
-    setCurrentPage(value);
-  };
-
-  const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-  const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
-  const currentWorkouts = filteredWorkouts.slice(
-    indexOfFirstItem,
-    indexOfLastItem
-  );
 
   useEffect(() => {
     const fetchURL = async () => {
@@ -69,9 +54,9 @@ function App() {
               element={
                 <>
                   <VideoLoop />
-                  <WorkoutPage
+                  <WorkoutsPage
                     selectFilter={selectFilter}
-                    currentWorkouts={currentWorkouts}
+                    workouts={filteredWorkouts}
                     showWorkout={showWorkout}
                   />
                 </>
@@ -85,9 +70,7 @@ function App() {
             <Route path="/calculator" element={<CaloriesPage />} />
             <Route
               path="/planner"
-              element={
-                <Planner workouts={workouts} showWorkout={showWorkout} />
-              }
+              element={<Planner workouts={workouts} showWorkout={showWorkout} />}
             />
           </Routes>
           <ModalData

@@ -26,7 +26,6 @@ const SingleCard = ({ name, image, showWorkout, id }) => {
   return (
     <div className="single-card-container">
       <div className="card-image">
-        {/*  <img src={test3} alt={name} className="workout-image" /> */}
         <img src={image} alt={name} className="workout-image" />
        
         {/* <div className="favorite-icon" onClick={handleToggleFavorite}>

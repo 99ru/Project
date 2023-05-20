@@ -36,6 +36,17 @@
   height: 100vh;
 }
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+  background: #434343;
+  padding: 6px;
+}
+
+.pagination-wrapper .MuiPaginationItem-root {
+  color: white !important;
+}
 
 
 

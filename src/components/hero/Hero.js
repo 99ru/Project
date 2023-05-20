@@ -7,7 +7,7 @@ const Hero = ({ selectFilter }) => {
       <section className="nav-categories">
       
         <article className="categories">
-        <p className="nav-title">Find your workouts</p>
+        <p className="nav-title" /* id="started" */>Find your workouts</p>
           <FilteredWorkout selectFilter={selectFilter} />
         </article>
       </section>

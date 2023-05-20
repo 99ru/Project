@@ -31,13 +31,18 @@ button{
   color: #121212;
   border: 10px solid #ffffff;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 2rem 2rem;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-top: 20px;
 }
 
+.get-started-button:hover{
+  background-color: rgb(95, 95, 95);
+  color: #ffffff;
+  border: 10px solid rgb(95, 95, 95);
+}
 
 
