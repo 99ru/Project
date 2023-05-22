@@ -21,7 +21,9 @@ function App() {
   const [modal, setModal] = useState(false);
   const [selectedWorkout, setSelectedWorkout] = useState(null);
 
-  const selectFilter = (e) => setFilter(e.target.id);
+  /* const selectFilter = (e) => setFilter(e.target.id); */
+  const handleFilterChange = (e) => setFilter(e.target.id);
+
   const toggleModal = () => setModal(!modal);
   const showWorkout = (id) => {
     setSelectedWorkout(id);
@@ -55,7 +57,7 @@ function App() {
                 <>
                   <VideoLoop />
                   <WorkoutsPage
-                    selectFilter={selectFilter}
+                    handleFilterChange={handleFilterChange}
                     workouts={filteredWorkouts}
                     showWorkout={showWorkout}
                   />

@@ -5,7 +5,7 @@ import Pagination from "@mui/material/Pagination";
 
 const ITEMS_PER_PAGE = 12;
 
-const WorkoutsPage = ({ selectFilter, workouts, showWorkout }) => {
+const WorkoutsPage = ({ handleFilterChange, workouts, showWorkout }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (event, value) => {
@@ -18,11 +18,11 @@ const WorkoutsPage = ({ selectFilter, workouts, showWorkout }) => {
 
   useEffect(() => {
     setCurrentPage(1); // Reset page when filter changes
-  }, [selectFilter]);
+  }, [handleFilterChange]);
 
   return (
     <div>
-      <Hero selectFilter={selectFilter} />
+      <Hero handleFilterChange={handleFilterChange} />
       <div className="main-content" id="started">
         <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
       </div>
