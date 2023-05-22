@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../components/hero/Hero";
 import Cards from "../components/workouts/Cards";
 import Pagination from "@mui/material/Pagination";
@@ -15,6 +15,10 @@ const WorkoutsPage = ({ selectFilter, workouts, showWorkout }) => {
   const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
   const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
   const currentWorkouts = workouts.slice(indexOfFirstItem, indexOfLastItem);
+
+  useEffect(() => {
+    setCurrentPage(1); // Reset page when filter changes
+  }, [selectFilter]);
 
   return (
     <div>

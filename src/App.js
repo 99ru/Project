@@ -62,7 +62,6 @@ function App() {
                 </>
               }
             />
-
             <Route
               path="/favorite"
               element={<FavoritePage showWorkout={showWorkout} />}
@@ -70,7 +69,9 @@ function App() {
             <Route path="/calculator" element={<CaloriesPage />} />
             <Route
               path="/planner"
-              element={<Planner workouts={workouts} showWorkout={showWorkout} />}
+              element={
+                <Planner workouts={workouts} showWorkout={showWorkout} />
+              }
             />
           </Routes>
           <ModalData

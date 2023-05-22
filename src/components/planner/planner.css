@@ -199,10 +199,21 @@
 }
 
 .workout-item-name {
+  /* text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 10px; */
+
+  
+
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.1rem;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .workout-item-image {

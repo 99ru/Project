@@ -15,6 +15,7 @@ const CardModal = ({ modal, toggleModal, workout,}) => {
           <p><strong>Area:</strong> {workout.bodyParts}</p>
             <p><strong>Primary muscle:</strong> {workout.primaryMuscle}</p>
             <p><strong>Equipment used:</strong> <span>{workout.equipment}</span></p>
+            <p><strong>How to Perform</strong></p>
             <p>Donec fermentum augue quam, in euismod massa ultricies in. Vestibulum lacinia erat ligula, at bibendum leo finibus ultrices. Nullam etlacus</p>
           </div>
         </div>

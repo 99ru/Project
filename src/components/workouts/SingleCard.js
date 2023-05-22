@@ -7,8 +7,8 @@ import "./card.css";
 const SingleCard = ({ name, image, showWorkout, id }) => {
   const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
   const isFavorite = favorites.some((favoriteItem) => favoriteItem.id === id);
-  const MAX_NAME_LENGTH = 35;
 
+  const MAX_NAME_LENGTH = 35;
   const truncatedName =
   name.length > MAX_NAME_LENGTH
     ? name.substring(0, MAX_NAME_LENGTH) + "..."
@@ -42,16 +42,12 @@ const SingleCard = ({ name, image, showWorkout, id }) => {
       </div>
 
       <div className="card-content">
-       {/*  <h4 onClick={() => showWorkout(id)}>{name}</h4> */}
        <h4 onClick={() => showWorkout(id)} title={name}>
           {truncatedName}
         </h4>
         <button onClick={() => showWorkout(id)} className="card-button">
           Show details
         </button>
-      {/*   <button onClick={handleToggleFavorite} className="card-button">
-          {isFavorite ? "Unfavorite" : "Favorite"}
-        </button> */}
       </div>
     </div>
   );

@@ -110,7 +110,6 @@ const SinglePlan = ({
   <div key={workout.id} className="workout-item">
     <img
       src={workout.image}
-      alt={workout.name}
       className="workout-item-image"
       onClick={() => showWorkout(workout.id)}
     />
@@ -151,7 +150,6 @@ const SinglePlan = ({
     </div>
   </div>
 ))}
-
     </div>
   );
 };

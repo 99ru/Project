@@ -2,14 +2,14 @@
   background-color: #121212;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
-  padding: 0 1rem; /* Add horizontal padding to create space */
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
@@ -20,12 +20,14 @@
 .header-logo img {
   width: 50px;
   padding: 1rem;
+  margin-right: 60rem; /* Adjust margin to create space between logo and links */
 }
 
 .header-logo ul {
   display: flex;
   list-style: none;
   margin-left: 1rem;
+  margin: 0 auto;
 }
 
 .header-logo li {
