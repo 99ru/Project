@@ -25,6 +25,16 @@ const Planner = ({ workouts, showWorkout }) => {
   };
 
   const addWorkoutToPlan = (planId, workout) => {
+    // Find the plan
+    const plan = workoutPlans.find(plan => plan.id === planId);
+
+    // Check if the workout is already in the plan
+    if (plan.workouts.some(w => w.id === workout.id)) {
+        alert('This workout is already in the plan');
+        return; // End the function early, do not add the workout
+    }
+
+    // If the workout is not in the plan, then we can add it
     const workoutWithSetsAndReps = { ...workout, sets: 1, reps: 10 };
     const newPlans = workoutPlans.map((plan) =>
       plan.id === planId
@@ -34,6 +44,7 @@ const Planner = ({ workouts, showWorkout }) => {
     setWorkoutPlans(newPlans);
     localStorage.setItem("workoutPlans", JSON.stringify(newPlans));
   };
+
 
   const deletePlan = (planId) => {
     const newPlans = workoutPlans.filter((plan) => plan.id !== planId);
@@ -93,8 +104,8 @@ const Planner = ({ workouts, showWorkout }) => {
     }
   }, []);
 
+  /* Create planner */
   return (
-    <div className="wrapper">
       <div className="planner">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <input
@@ -124,7 +135,6 @@ const Planner = ({ workouts, showWorkout }) => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

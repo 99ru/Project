@@ -68,7 +68,7 @@ const SinglePlan = ({
             Edit Plan
           </button>
           <button onClick={() => deletePlan(plan.id)} className="dropdown-item">
-            Delete Plan
+            <p className="dropdown-delete-plan-btn">Delete Plan</p>
           </button>
         </div>
       )}
