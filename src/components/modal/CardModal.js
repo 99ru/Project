@@ -7,9 +7,11 @@ const CardModal = ({ modal, toggleModal, workout,}) => {
       {modal ? (
         <main className="modal-container">
         <div className="modal-content">
-          
           <button type="button" onClick={toggleModal}>Close</button>
-          <img src={workout.gif} alt={workout.name} />
+          <img src={workout.video} alt={workout.name} />
+         <video autoPlay loop muted className="hero-video">
+              <source src={workout.video} type="video/mp4" />
+            </video>
           <div className="info-box">
           <h1>{workout.name}</h1>
           <p><strong>Area:</strong> {workout.bodyParts}</p>
@@ -28,3 +30,5 @@ const CardModal = ({ modal, toggleModal, workout,}) => {
 };
 
 export default CardModal;
+
+

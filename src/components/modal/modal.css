@@ -31,6 +31,19 @@
   color: #fff;
 }
 
+.video-container {
+  max-width: 40vh;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container video {
+  max-width: 100%;
+  height: auto;
+}
+
 .modal-content button {
   font-size: 16px;
   font-weight: 400;

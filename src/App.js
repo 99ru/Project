@@ -13,7 +13,7 @@ import VideoLoop from "./components/video/VideoLoop";
 import ModalData from "./components/modal/ModalData";
 import Footer from "./components/footer/Footer";
 
-const URL = "http://localhost:6969/exercises";
+const URL = "http://localhost:3030/exercises";
 
 function App() {
   const [workouts, setWorkouts] = useState([]);

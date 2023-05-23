@@ -3,7 +3,7 @@ import Hero from "../components/hero/Hero";
 import Cards from "../components/workouts/Cards";
 import Pagination from "@mui/material/Pagination";
 
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 20;
 
 const WorkoutsPage = ({ handleFilterChange, workouts, showWorkout }) => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -11,7 +11,7 @@ const Cards = ({ workouts, showWorkout }) => {
             id={exercise.id}
             name={exercise.name}
             image={exercise.image}
-            gif={exercise.gif}
+            video={exercise.video}
             bodyParts={exercise.bodyParts}
             equipment={exercise.equipment}
             primaryMuscle={exercise.primaryMuscle}

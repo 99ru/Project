@@ -4,6 +4,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import "./card.css";
 
+
+
 const SingleCard = ({ name, image, showWorkout, id }) => {
   const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
   const isFavorite = favorites.some((favoriteItem) => favoriteItem.id === id);

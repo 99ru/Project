@@ -16,7 +16,7 @@ const VideoLoop = () => {
 
       <section>
         <h1>START YOUR GYM JOUNREY</h1>
-        <h3>browse through 1300 workouts</h3>
+        <h3>browse through our workouts</h3>
         <button className="get-started-button" id="started" onClick={scrollToSection}>GET STARTED</button>
       </section>
     </div>
