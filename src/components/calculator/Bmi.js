@@ -39,31 +39,31 @@ const Bmi = () => {
   };
 
   return (
-    <div className="calculator bmi-calculator">
-      <div className="calculator-content">
-        <label htmlFor="calc-weight">Weight (kg)</label>
+    <div className="bmi-container">
+      <div className="bmi-content">
+        {/* <label htmlFor="calc-weight">Weight (kg)</label> */}
         <input
           type="number"
           name="weight"
           id="calc-weight"
           value={weight}
-          placeholder="Enter your weight"
+          placeholder="Enter your weight (kg)"
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="calc-height">Height (cm)</label>
+        {/* <label htmlFor="calc-height">Height (cm)</label> */}
         <input
           type="number"
           name="height"
           id="calc-height"
           value={height}
-          placeholder="Enter your height"
+          placeholder="Enter your height (cm)"
           onChange={handleInputChange}
           required
         />
         <button onClick={calculateBMI}>Calculate</button>
       </div>
-      <div className="results">
+      <div className="bmi-results">
         {bmiResult && (
           <>
             <div id="calc-bmi-result">
