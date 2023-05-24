@@ -7,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;  
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -40,14 +41,7 @@ scrollbar-color: #888 #f1f1f1;
   justify-content: center;
 }
 
-.favorite-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 8rem;
-  height: 100vh;
-}
+
 
 .pagination-wrapper {
   display: flex;

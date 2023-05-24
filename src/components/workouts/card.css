@@ -1,48 +1,58 @@
-.single-card-container img {
+.favorite-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 8rem;
+  height: 100vh;
+}
+
+.single-card-container img {
+  /*   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   max-width: 100%;
+  width: 100%; */
+
   width: 100%;
+  object-fit: cover; /* This will make sure your image covers the div completely without stretching */
+  height: 350px; /* Set a fixed height */
 }
 
 .single-card-container {
   position: relative;
   width: 350px;
-  padding-top: 1rem;
   margin: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0rem;
+  background: #f5f5f5;
+  
 }
+
 
 .card-content {
-  /* padding: 1rem; */   /* add this back if knappen yeetar åt helvete */
+  /* padding: 1rem;  */
   text-align: center;
-  height: 80px;
+  /* height: 70px; */
 }
 
+
 .card-button {
-    background: #121212;
+      background: #121212;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 0;
-    margin: 6px;
+    margin: 14px;
     padding: 6px 2rem;
-    gap: 10px;
+    
     text-transform: capitalize;
 }
 
 .card-button:hover {
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.favorite-icon {
-  color: #121212;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin: 0 0 0 10px;
 }
 
 .card-image {
@@ -51,6 +61,10 @@
 
 .favorite-icon {
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: 1rem;
+    color: #121212;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 0 0 10px;
 }

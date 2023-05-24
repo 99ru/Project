@@ -1,31 +1,39 @@
 
+
 .planner-container {
   display: flex;
   flex-direction: column;
+  justify-content: c;
   align-items: center;
-  padding: 20px;
+ /*  padding: 20px; */
   min-height: 100vh;
   margin-top: 8rem;
 }
-
+.add-new{
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
 .planner-create-button {
   color: white;
   border: none;
   background: black;
-  padding: 4px;
+  /* padding: 4px; */
 }
 
 .planner input {
-  margin-bottom: 10px;
   padding: 10px;
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-/* .planner button:hover {
-  background-color: white;
-} */
+.planner button:hover {
+  /* background-color: rgb(255, 255, 255); */
+}
 
 .planner .delete-button {
     border: none;
@@ -94,22 +102,7 @@
 }
 
 
-/* For Webkit browsers like Chrome and Safari */
-.workout-plan::-webkit-scrollbar {
-  width: 5px;
-}
 
-.workout-plan::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.workout-plan::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.workout-plan::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 /* For Firefox */
 .workout-plan {
@@ -218,11 +211,9 @@ scrollbar-color: #888 #f1f1f1;
 
 .workout-item-image {
   /* height: 70px; */
-  width: 120px;
-  /* object-fit: cover;
-  border-radius: 50%; */
+  width: 150px;
   cursor: pointer;
-  margin: 6px;
+  margin: 1rem;
 }
 
 .dropdown-menu {
@@ -264,8 +255,8 @@ scrollbar-color: #888 #f1f1f1;
     top: 0px;
     border: none;
     border-radius: 50%;
-    /* background: whitesmoke; */
-    background: transparent;
+    background: whitesmoke;
+    /* background: transparent; */
     cursor: pointer;
     padding: 0;
 }
@@ -284,3 +275,19 @@ scrollbar-color: #888 #f1f1f1;
 
 }
 
+/* For Webkit browsers like Chrome and Safari */
+.workout-plan::-webkit-scrollbar {
+  width: 5px;
+}
+
+.workout-plan::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.workout-plan::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.workout-plan::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -16,7 +16,6 @@ return (
             workout={filteredWorkout}
             modal={modal}
             toggleModal={toggleModal}
-            
           />
         ))}
   </>

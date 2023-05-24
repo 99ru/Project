@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SinglePlan from "./SinglePlan";
 import "./planner.css";
+import AddIcon from '@mui/icons-material/Add';
 
 const Planner = ({ workouts, showWorkout }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [workoutPlans, setWorkoutPlans] = useState([]);
   const [newPlanName, setNewPlanName] = useState("");
+  const [addingPlan, setAddingPlan] = useState(false);
 
-  const addPlan = () => {
+  const addPlan = (event) => {
+     event.preventDefault();
     if (newPlanName.length < 3) {
       setErrorMessage("Plan name must be at least 3 characters long.");
       return;
@@ -22,16 +25,18 @@ const Planner = ({ workouts, showWorkout }) => {
     localStorage.setItem("workoutPlans", JSON.stringify(newPlans));
     setNewPlanName("");
     setErrorMessage("");
+    setAddingPlan(false); // Hide the input field
+    
   };
 
   const addWorkoutToPlan = (planId, workout) => {
     // Find the plan
-    const plan = workoutPlans.find(plan => plan.id === planId);
+    const plan = workoutPlans.find((plan) => plan.id === planId);
 
     // Check if the workout is already in the plan
-    if (plan.workouts.some(w => w.id === workout.id)) {
-        alert('This workout is already in the plan');
-        return; // End the function early, do not add the workout
+    if (plan.workouts.some((w) => w.id === workout.id)) {
+      alert("This workout is already in the plan");
+      return; // End the function early, do not add the workout
     }
 
     // If the workout is not in the plan, then we can add it
@@ -44,7 +49,6 @@ const Planner = ({ workouts, showWorkout }) => {
     setWorkoutPlans(newPlans);
     localStorage.setItem("workoutPlans", JSON.stringify(newPlans));
   };
-
 
   const deletePlan = (planId) => {
     const newPlans = workoutPlans.filter((plan) => plan.id !== planId);
@@ -106,36 +110,45 @@ const Planner = ({ workouts, showWorkout }) => {
 
   /* Create planner */
   return (
-      <div className="planner">
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <input
-          type="text"
-          placeholder="New plan name"
-          value={newPlanName}
-          onChange={(e) => setNewPlanName(e.target.value)}
-          className="planner-input"
-        />
-        <button onClick={addPlan} className="planner-create-button">
-          Create Plan
-        </button>
-
-        <div className="workout-plans">
-          {workoutPlans.map((plan) => (
-            <SinglePlan
-              key={plan.id}
-              plan={plan}
-              workouts={workouts}
-              addWorkoutToPlan={addWorkoutToPlan}
-              deletePlan={deletePlan}
-              deleteWorkout={deleteWorkout}
-              showWorkout={showWorkout}
-              updateWorkoutSets={updateWorkoutSets}
-              updateWorkoutReps={updateWorkoutReps}
-            />
-          ))}
+  <div className="planner">
+    <div className="add-new">
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {!addingPlan && (
+        <div onClick={() => setAddingPlan(true)} style={{textAlign: "center"}}>
+          <AddIcon style={{fontSize: "3rem"}} />
+          <p>Add new</p>
         </div>
-      </div>
-  );
+      )}
+      {addingPlan && 
+        <form onSubmit={addPlan}>
+          <input
+            type="text"
+            placeholder="New plan name"
+            value={newPlanName}
+            onChange={(e) => setNewPlanName(e.target.value)}
+            className="planner-input"
+            
+          />
+        </form>
+      }
+    </div>
+    <div className="workout-plans">
+      {workoutPlans.map((plan) => (
+        <SinglePlan
+          key={plan.id}
+          plan={plan}
+          workouts={workouts}
+          addWorkoutToPlan={addWorkoutToPlan}
+          deletePlan={deletePlan}
+          deleteWorkout={deleteWorkout}
+          showWorkout={showWorkout}
+          updateWorkoutSets={updateWorkoutSets}
+          updateWorkoutReps={updateWorkoutReps}
+        />
+      ))}
+    </div>
+  </div>
+);
 };
 
 export default Planner;
