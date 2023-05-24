@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Hero from "../components/hero/Hero";
+import Category from "../components/category/Category";
 import Cards from "../components/workouts/Cards";
 import Pagination from "@mui/material/Pagination";
 
@@ -27,7 +27,7 @@ const WorkoutsPage = ({ handleFilterChange, workouts, showWorkout, filter }) => 
 
   return (
     <div>
-      <Hero handleFilterChange={handleFilterChange} />
+      <Category handleFilterChange={handleFilterChange} />
       <div className="main-content" id="started">
         <Cards workouts={currentWorkouts} showWorkout={showWorkout} />
       </div>

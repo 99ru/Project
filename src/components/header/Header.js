@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg";
+import Logo2 from "../../assets/dumbbell-512.png";
 import Profile from "../../assets/identity.svg";
 import Favorite from "../../assets/fav.svg";
 import "./Header.css";
@@ -9,7 +10,7 @@ const Header = () => {
     <div className="header-container">
       <div className="header-logo">
         <Link to="/">
-          <img src={Logo} alt="gymshark logo" />
+          <img src={Logo2} alt="gymshark logo" />
         </Link>
       </div>
       <nav>
