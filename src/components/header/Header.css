@@ -20,21 +20,20 @@
 .header-logo img {
   width: 50px;
   padding: 1rem;
-  margin-right: 60rem; /* Adjust margin to create space between logo and links */
 }
 
-.header-logo ul {
+ul {
   display: flex;
   list-style: none;
   margin-left: 1rem;
   margin: 0 auto;
 }
 
-.header-logo li {
+li {
   margin-right: 1rem;
 }
 
-.header-logo a {
+a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
@@ -42,7 +41,7 @@
   text-transform: uppercase;
 }
 
-.header-logo a:hover {
+a:hover {
   color: #ccc;
 }
 

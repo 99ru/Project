@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   width: 800px;
-  height: 600px;
+  height: 480px;
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
@@ -27,15 +27,15 @@
 }
 
 .calculator input[type="number"] {
-  width: 100%;
-  height: 45px;
-  /* padding: 1rem 10rem 1rem 10rem; */
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  transition: box-shadow 0.3s ease;
+     width: 420px;
+    padding: 1rem 1rem 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+    margin: 1rem; /* test */
 }
 
 .calculator input[type="number"]:focus {

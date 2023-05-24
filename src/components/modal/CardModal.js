@@ -1,6 +1,6 @@
 import "./modal.css";
 
-const CardModal = ({ modal, toggleModal, workout,}) => {
+const CardModal = ({ modal, toggleModal, workout}) => {
 
   return (
     <>
@@ -8,8 +8,8 @@ const CardModal = ({ modal, toggleModal, workout,}) => {
         <main className="modal-container">
         <div className="modal-content">
           <button type="button" onClick={toggleModal}>Close</button>
-          <img src={workout.video} alt={workout.name} />
-         <video autoPlay loop muted className="hero-video">
+
+         <video autoPlay loop muted className="modal-workout-video">
               <source src={workout.video} type="video/mp4" />
             </video>
           <div className="info-box">

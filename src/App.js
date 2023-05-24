@@ -58,6 +58,7 @@ function App() {
                     handleFilterChange={handleFilterChange}
                     workouts={filteredWorkouts}
                     showWorkout={showWorkout}
+                    filter={filter}
                   />
                 </>
               }
