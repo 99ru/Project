@@ -8,16 +8,16 @@ const Bmi = () => {
   const [bmiCategory, setBmiCategory] = useState("");
 
   const handleInputChange = (event) => {
-  const { name, value } = event.target;
-  const nameToSetter = {
-    weight: setWeight,
-    height: setHeight
-  };
+    const { name, value } = event.target;
+    const nameToSetter = {
+      weight: setWeight,
+      height: setHeight
+    };
 
-  if (Object.prototype.hasOwnProperty.call(nameToSetter, name)) {
-    nameToSetter[name](value);
-  }
-};
+    if (name in nameToSetter) {
+      nameToSetter[name](value);
+    }
+  };
 
   const calculateBMI = () => {
     const heightInMeters = height / 100;
@@ -39,7 +39,6 @@ const Bmi = () => {
   return (
     <div className="bmi-container">
       <div className="bmi-content">
-        {/* <label htmlFor="calc-weight">Weight (kg)</label> */}
         <input
           type="number"
           name="weight"
@@ -49,7 +48,6 @@ const Bmi = () => {
           onChange={handleInputChange}
           required
         />
-        {/* <label htmlFor="calc-height">Height (cm)</label> */}
         <input
           type="number"
           name="height"
