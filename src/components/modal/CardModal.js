@@ -9,9 +9,11 @@ const CardModal = ({ modal, toggleModal, workout}) => {
         <div className="modal-content">
           <button type="button" onClick={toggleModal}>Close</button>
 
-         <video autoPlay loop muted className="modal-workout-video">
+          <img src={workout.gif} />
+
+        {/*  <video autoPlay loop muted className="modal-workout-video">
               <source src={workout.video} type="video/mp4" />
-            </video>
+            </video> */}
           <div className="info-box">
           <h1>{workout.name}</h1>
           <p><strong>Area:</strong> {workout.bodyParts}</p>
