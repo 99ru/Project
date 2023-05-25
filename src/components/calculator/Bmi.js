@@ -8,18 +8,16 @@ const Bmi = () => {
   const [bmiCategory, setBmiCategory] = useState("");
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    switch (name) {
-      case "weight":
-        setWeight(value);
-        break;
-      case "height":
-        setHeight(value);
-        break;
-      default:
-        break;
-    }
+  const { name, value } = event.target;
+  const nameToSetter = {
+    weight: setWeight,
+    height: setHeight
   };
+
+  if (Object.prototype.hasOwnProperty.call(nameToSetter, name)) {
+    nameToSetter[name](value);
+  }
+};
 
   const calculateBMI = () => {
     const heightInMeters = height / 100;

@@ -15,7 +15,7 @@
 
 .modal-content {
   position: relative;
-  background:#ffffff;
+  background: #ffffff;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
