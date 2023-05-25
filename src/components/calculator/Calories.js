@@ -11,27 +11,19 @@ const Calories = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    switch (name) {
-      case "gender":
-        setGender(value);
-        break;
-      case "age":
-        setAge(parseInt(value));
-        break;
-      case "height":
-        setHeight(parseInt(value));
-        break;
-      case "weight":
-        setWeight(parseInt(value));
-        break;
-      case "walking":
-        setWalking(parseInt(value));
-        break;
-      case "cardio":
-        setCardio(parseInt(value));
-        break;
-      default:
-        break;
+
+    const stateSetterMap = {
+      gender: setGender,
+      age: setAge,
+      height: setHeight,
+      weight: setWeight,
+      walking: setWalking,
+      cardio: setCardio,
+    };
+
+    const stateSetter = stateSetterMap[name];
+    if (stateSetter) {
+      stateSetter(parseInt(value));
     }
   };
 
@@ -52,6 +44,7 @@ const Calories = () => {
     <div className="bmr-container">
       <div className="bmr-content">
         <div className="choose-gender">
+          {/* Gender Selection */}
           <div className="segmented-control">
             <input
               id="calc-gender-male"
@@ -75,6 +68,7 @@ const Calories = () => {
             <label htmlFor="calc-gender-female">Female</label>
           </div>
         </div>
+        {/* Age */}
         <label htmlFor="calc-age" id="calc-age_value">
           Age: {age}
         </label>
@@ -87,6 +81,7 @@ const Calories = () => {
           max="100"
           onChange={handleInputChange}
         />
+        {/* Height */}
         <label htmlFor="calc-height" id="calc-height_value">
           Height: {height} cm
         </label>
@@ -99,6 +94,7 @@ const Calories = () => {
           max="250"
           onChange={handleInputChange}
         />
+        {/* Weight */}
         <label htmlFor="calc-weight" id="calc-weight_value">
           Weight: {weight} kg
         </label>
@@ -111,6 +107,7 @@ const Calories = () => {
           max="200"
           onChange={handleInputChange}
         />
+        {/* Walking */}
         <label htmlFor="calc-walking" id="calc-walking_value">
           Walking: {walking} hours per week
         </label>
@@ -123,6 +120,7 @@ const Calories = () => {
           max="50"
           onChange={handleInputChange}
         />
+        {/* Cardio */}
         <label htmlFor="calc-cardio" id="calc-cardio_value">
           Cardio: {cardio} hours per week
         </label>
@@ -137,16 +135,19 @@ const Calories = () => {
         />
       </div>
       <div className="bmr-results">
+        {/* Target Gain Weight */}
         <div id="calc-target-gain">
           To Gain Weight:
           <br />
           <span>{targetGainWeight} calories</span>
         </div>
+        {/* Target Maintain */}
         <div id="calc-target-maintain">
           To Maintain:
           <br />
           <span>{targetMaintain} calories</span>
         </div>
+        {/* Target Lose Weight */}
         <div id="calc-target-lose">
           To Lose Weight:
           <br />
