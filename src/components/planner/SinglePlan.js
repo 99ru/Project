@@ -45,12 +45,10 @@ const SinglePlan = ({
   return (
     <div className="workout-plan">
       <h2 className="workout-plan-title">{plan.name}</h2>
-
       <div className="icon-buttons">
         <button onClick={handleAdd} className="add-workout">
           <SearchIcon />
         </button>
-
         {!editing ? (
           <button onClick={toggleOptions} className="edit-button">
             <EditNoteRoundedIcon />
@@ -61,7 +59,6 @@ const SinglePlan = ({
           </button>
         )}
       </div>
-
       {showOptions && (
         <div className="dropdown-menu">
           <button onClick={handleEdit} className="dropdown-item">
@@ -72,7 +69,6 @@ const SinglePlan = ({
           </button>
         </div>
       )}
-
       {showSearch && (
         <div className="search-bar">
           <input

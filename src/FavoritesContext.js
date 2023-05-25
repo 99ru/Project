@@ -15,7 +15,7 @@ export const FavoritesProvider = (props) => {
   const addFavorite = (workout) => {
     setFavorites((prevFavorites) => {
       const existingItem = prevFavorites.find(
-        (favoriteItem) => favoriteItem.id === workout.id
+        (favoriteItem) => favoriteItem.id === workout.id 
       );
 
       let updatedFavorites;
