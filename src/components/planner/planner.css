@@ -16,6 +16,8 @@
   align-items: center;
   width: 100%;
   margin-bottom: 1rem;
+  cursor: pointer;
+  
 }
 .planner-create-button {
   color: white;
@@ -200,8 +202,8 @@ scrollbar-color: #888 #f1f1f1;
 
 .workout-item-name {
   text-transform: capitalize;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
   margin-bottom: 10px;
   text-overflow: ellipsis;
   width: 70%;
@@ -270,8 +272,7 @@ scrollbar-color: #888 #f1f1f1;
 }
 .workout-item-sets-reps{
  color: rgb(0, 0, 0);
- text-transform: uppercase;
-
+ font-weight: 600;
 }
 
 /* For Webkit browsers like Chrome and Safari */
