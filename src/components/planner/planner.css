@@ -210,10 +210,9 @@ scrollbar-color: #888 #f1f1f1;
 }
 
 .workout-item-image {
-  /* height: 70px; */
-  width: 120px;
+  width: 100px;
   cursor: pointer;
-  margin: 1rem;
+  /* margin: 1rem; */
 }
 
 .dropdown-menu {
