@@ -7,9 +7,7 @@ const CaloriesPage = () => {
     <div className="calculator-container">
       <Bmi />
       <Calories />
-    </div>
-     
-   
+    </div> 
   )
 }
 
